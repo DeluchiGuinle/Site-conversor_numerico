@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+
+body{
+    --color-font: white;
+    --color-buttonckd: rgb(75, 75, 75);
+    --color-button: white;
+    --color-bg: black;
+    --color-input: white;
+    --font: Radio Canada;
+    --fontsize-footer: clamp(13px, 2.1vw, 17px);
+    --fontsize-title: clamp(35px, 5.1vw, 50px);
+}
+
+body.white{
+    --color-font: black;
+    --color-buttonCkd: rgb(200,200,200);
+    --color-button: black;
+    --color-bg: white;
+    --color-input: rgb(230,230,230);
+    --font: Radio Canada;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+.grid_content{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "acess" "titulo" "inputs" "rodape";
+    grid-template-rows: 7% 20% auto 15%;
+    position: relative;
+    z-index: 100;
+}
+
+#particles-js{
+    background-color: var(--color-bg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.acessibilidade{
+    grid-area: acess;
+    color: var(--color-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--fontsize-title);
+    color: var(--color-font);
+}
+.inputs_valores{
+    grid-area: inputs;
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    color: var(--color-font);
+}
+.footer{
+    grid-area: rodape;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-font);
+    font-size: var(--fontsize-footer);
+    gap: 10px;
+}
+.footer ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 5px; 
+}
+
+.entradas{
+    width: 15%;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    min-width: 200px;
+    padding: 0 0 0 10px;
+    transition: 0.4s;
+    color: black;
+    background-color: var(--color-input);
+}
+
+.entradas:hover{
+    background-color: lightgrey;
+    transform: scale(1.03);
+}
+.entradas:focus{
+    background-color: lightgrey;
+    transform: scale(1.03);
+    border: 0;
+}
+
+.label{
+    color: var(--color-button);
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 4px;
+}
+.label:hover{
+    transition: 0.7s;
+    background-color: var(--color-buttonckd);
+    color: rgb(220,220,220);
+}
+
+#contraste_branco:checked ~ .label1{
+    background-color: var(--color-buttonckd);
+    color: rgb(165, 165, 165);
+}
+#contraste_preto:checked ~ .label2{
+    background-color: var(--color-buttonckd);
+}
+#label_aumentar:checked ~ .label3{
+    background-color: var(--color-buttonckd);
+}
+#label_diminuir:checked ~ .label4{
+    background-color: var(--color-buttonckd);
+}
+
+.buttons_menu{
+    display: none;   
+}
+
+.labelInput{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+
+

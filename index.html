@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gabriel Deluchi">
+    <meta name="description" content="Site criado para fazer a conversão de valores">
+    <meta name="keywords" content="binário, hexadecimal, octal, decimal, conversão">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+    <title>Conversor de Bases Numéricas</title>
+</head>
+<body>
+<div id="particles-js"></div>
+<div class="grid_content">
+    <div class="acessibilidade">
+        <input type="radio" name="contraste" class="buttons_menu" id="contraste_preto" value="preto" onchange="mudarFundo()" checked>
+
+        <input type="radio" name="contraste" class="buttons_menu" id="contraste_branco" value="branco" onchange="mudarFundo()">
+
+        <input type="button" class="buttons_menu" id="aumentar_fonte" onclick="increaseValues()" value="A">
+
+        <input type="button" class="buttons_menu" id="diminuir_fonte" onclick="decreaseValues()" value="a">
+
+        <label class="label label2 fas fa-moon " for="contraste_preto" id="label_preto"></label>
+        <label class="label label1 fas fa-sun " for="contraste_branco" id="label_branco"></label>
+        <label class="label label3 fas fa-arrow-up " for="aumentar_fonte" id="label_aumentar"></label>
+        <label class="label label4 fas fa-arrow-down " for="diminuir_fonte" id="label_diminuir"></label>
+
+    </div>
+
+    <div class="title">
+        <span>Conversor de Bases da Informática</span>        
+    </div>
+
+    <div class="inputs_valores">
+        <div class="labelInput">
+            <span><u>Decimal:</u></span>
+            <input type="text" class="entradas" id="decimal" placeholder="Decimal">
+        </div>
+        <hr>
+        <div class="labelInput">
+            <span><u>Binário:</u></span>
+            <input type="text" class="entradas" id="binario" placeholder="Binário">
+        </div>
+        <hr>
+        <div class="labelInput">
+            <span><u>Octal:</u></span>
+            <input type="text" class="entradas" id="octal" placeholder="Octal">
+        </div>
+        <hr>
+        <div class="labelInput">
+            <span><u>Hexadecimal:</u></span>
+            <input type="text" class="entradas" id="hexadecimal" placeholder="Hexadecimal">
+        </div>
+    </div>
+
+    <div class="footer">
+        <ul>
+            <li>Created by: Gabriel Deluchi</li>
+        </ul>
+        <span>&COPY;2023</span>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>
